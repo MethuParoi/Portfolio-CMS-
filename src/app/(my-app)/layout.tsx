@@ -1,7 +1,7 @@
 "use client";
 
 import { metadata } from "./metadata";
-import "./globals.css";
+import "../globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/ui/Footer";
 import { FloatingNav } from "@/components/ui/floating-navbar";

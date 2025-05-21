@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 // import { div } from "framer-motion/client";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { getProjectDetails } from "@/lib/api-projects";
+// import { getProjectDetails } from "@/lib/api-projects";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import { BiLogoTypescript } from "react-icons/bi";
 import { FaGitAlt, FaJs, FaReact } from "react-icons/fa";
@@ -42,14 +42,14 @@ export default function ProjectDetails() {
     .replace(/\b\w/g, (char) => char.toUpperCase());
   // console.log("title", title);
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const data = await getProjectDetails(title);
-      setProjectDetails(data[0]);
-      // console.log("projects", data);
-    };
-    fetchProjects();
-  }, [title]);
+  // useEffect(() => {
+  //   const fetchProjects = async () => {
+  //     const data = await getProjectDetails(title);
+  //     setProjectDetails(data[0]);
+  //     // console.log("projects", data);
+  //   };
+  //   fetchProjects();
+  // }, [title]);
 
   const renderIcon = (varient: string) => {
     switch (varient) {

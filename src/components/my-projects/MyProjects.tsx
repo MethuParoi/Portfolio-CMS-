@@ -11,7 +11,7 @@ import { PinContainer } from "../ui/3d-pin";
 import Image from "next/image";
 import Button from "../ui/Button";
 import { useEffect, useState } from "react";
-import { getProjects } from "@/lib/api-projects";
+// import { getProjects } from "@/lib/api-projects";
 import "animate.css";
 import { useRouter } from "next/navigation";
 
@@ -28,14 +28,14 @@ const MyProjects = () => {
 
   const router = useRouter();
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      const data = await getProjects();
-      setProjects(data);
-      console.log("projects", data);
-    };
-    fetchProjects();
-  }, []);
+  // useEffect(() => {
+  //   const fetchProjects = async () => {
+  //     const data = await getProjects();
+  //     setProjects(data);
+  //     console.log("projects", data);
+  //   };
+  //   fetchProjects();
+  // }, []);
 
   const renderIcon = (varient: string) => {
     switch (varient) {
